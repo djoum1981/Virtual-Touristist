@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qKC-Ti-ob1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LocationMapViewController" customModule="Virtual_Tourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9gV-8d-j0T">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gV-8d-j0T" secondAttribute="trailing" id="5ZU-j1-nx0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9gV-8d-j0T" secondAttribute="bottom" id="CQN-6R-baq"/>
+                            <constraint firstItem="9gV-8d-j0T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IKn-g6-KpE"/>
+                            <constraint firstItem="9gV-8d-j0T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RSZ-Ts-Ib9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B2y-fW-7d9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="68"/>
+        </scene>
+        <!--Photo Album Controller View Controller-->
+        <scene sceneID="qWL-Ue-fbd">
+            <objects>
+                <viewController id="gwu-Ac-yZz" customClass="PhotoAlbumControllerViewController" customModule="Virtual_Tourist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yH5-7y-R6P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bLO-uF-wM7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="kaw-ma-zmP"/>
+                                </constraints>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LGe-bq-ebl">
+                                <rect key="frame" x="0.0" y="234" width="414" height="594"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OHj-LO-37h">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="4FV-Y9-JPy">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vf5-hI-dOi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc4-9c-OEf">
+                                <rect key="frame" x="155" y="832" width="104" height="30"/>
+                                <state key="normal" title="New Collection"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="17C-lv-kHR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LGe-bq-ebl" firstAttribute="top" secondItem="bLO-uF-wM7" secondAttribute="bottom" constant="4" id="1wB-lx-bmJ"/>
+                            <constraint firstItem="bLO-uF-wM7" firstAttribute="top" secondItem="17C-lv-kHR" secondAttribute="top" id="HpO-nc-BlU"/>
+                            <constraint firstItem="17C-lv-kHR" firstAttribute="trailing" secondItem="bLO-uF-wM7" secondAttribute="trailing" id="Rx4-3h-3lt"/>
+                            <constraint firstItem="LGe-bq-ebl" firstAttribute="leading" secondItem="17C-lv-kHR" secondAttribute="leading" id="X2w-0t-qOl"/>
+                            <constraint firstItem="17C-lv-kHR" firstAttribute="trailing" secondItem="rc4-9c-OEf" secondAttribute="trailing" constant="155" id="b4X-jP-eoC"/>
+                            <constraint firstItem="bLO-uF-wM7" firstAttribute="leading" secondItem="17C-lv-kHR" secondAttribute="leading" id="h3S-rY-Sqg"/>
+                            <constraint firstItem="LGe-bq-ebl" firstAttribute="trailing" secondItem="17C-lv-kHR" secondAttribute="trailing" id="jDb-Ag-vWK"/>
+                            <constraint firstItem="rc4-9c-OEf" firstAttribute="bottom" secondItem="17C-lv-kHR" secondAttribute="bottom" id="kXO-gp-YZY"/>
+                            <constraint firstItem="rc4-9c-OEf" firstAttribute="leading" secondItem="17C-lv-kHR" secondAttribute="leading" constant="155" id="lDB-7n-61a"/>
+                            <constraint firstItem="rc4-9c-OEf" firstAttribute="top" secondItem="LGe-bq-ebl" secondAttribute="bottom" constant="4" id="xYS-FN-CaK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9f-X1-UXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.7391304347827" y="67.633928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iuJ-zx-TlQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qKC-Ti-ob1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qLf-lT-xkX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8lh-Dz-lNB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auc-5c-D4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217.39130434782609" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
